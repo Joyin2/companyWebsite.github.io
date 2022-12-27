@@ -1,9 +1,28 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
-    <div>
-      hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi totam mollitia perspiciatis omnis illum placeat laborum. Deleniti, fugiat. Sunt accusantium vero molestias adipisci? Fugiat, doloremque. Suscipit fuga maxime, eaque magnam cupiditate eius amet perferendis fugit quas doloremque, ea atque molestias enim praesentium dolorum id quia voluptatem quos at quae?
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/" component ={Home}/>
+          <Route exact path="/About" component ={About}/>
+          <Route exact path="/Contact" component ={Contact}/>
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
