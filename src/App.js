@@ -1,11 +1,11 @@
 import React from 'react'
-import Router from './routes/router'
-
+import Navbar from "./components/Navbar/Navbar"
 
 function App() {
   return (
     <>
-      <Router />
+      <Navbar />
+    
     </>
   
   )
